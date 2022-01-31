@@ -1,0 +1,65 @@
+.item {
+    position: relative;
+    flex-basis: 30%;
+    box-shadow: 0 0 8px 0 #e0e0e0;
+    padding: 15px;
+    margin-bottom: 10px;
+  }
+  
+  .name {
+    font-size: 22px;
+    margin-bottom: 5px;
+  }
+  
+  .item img{
+    width: 300px;
+    height: 250px;
+  }
+  .like, .like_active {
+    display: inline-block;
+    margin-top: 10px;
+    border: 1px solid #aeaeae;
+    padding: 5px 10px;
+  }
+  .like:hover, .like_active:hover {
+    cursor: pointer;
+  }
+  
+  .like::before {
+    content: '';
+    background: url(../../images/like.png) no-repeat center center;
+    margin-right: 5px;
+    background-size: 16px;
+    display: inline-block;
+    width: 17px;
+    height: 17px;
+  }
+  .like_active::before {
+    content: '';
+    background: url(../../images/like_active.png) no-repeat center center;
+    margin-right: 5px;
+    background-size: 16px;
+    display: inline-block;
+    width: 17px;
+    height: 17px;
+  }
+  
+  .del {
+    position: absolute;
+    right: 5px;
+    bottom: 10px;
+  }
+  
+  .del:hover {
+    cursor: pointer;
+  }
+  
+  .del::before {
+    content: '';
+    background: url(../../images/bin.png) no-repeat center center;
+    margin-right: 5px;
+    background-size: 22px;
+    display: inline-block;
+    width: 22px;
+    height: 22px;
+  }

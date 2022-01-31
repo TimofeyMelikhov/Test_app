@@ -1,0 +1,16 @@
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+  }
+  
+  .likesFilter {
+    display: inline-block;
+    border: 1px solid #aeaeae;
+    padding: 5px 10px;
+    margin-bottom: 20px;
+  }
+  .likesFilter:hover {
+    cursor: pointer;
+  }
