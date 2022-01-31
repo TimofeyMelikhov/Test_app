@@ -2,6 +2,7 @@
   "name": "test_app",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://timofeymelikhov.github.io/test_app",
   "dependencies": {
     "@reduxjs/toolkit": "^1.7.1",
     "@testing-library/jest-dom": "^5.16.1",
@@ -44,6 +45,6 @@
     ]
   },
   "devDependencies": {
-    "gh-pages": "^3.2.3"
+    "gh-pages": "3.2.3"
   }
 }
