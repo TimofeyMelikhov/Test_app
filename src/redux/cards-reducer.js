@@ -1,7 +1,7 @@
 const LIKE = 'LIKE'
 const ADD_CARDS = 'ADD_CARDS'
 const REMOVE_CARDS = 'REMOVE_CARDS'
-const SET_IS_FETCHiNG = 'SET_IS_FETCHiNG'
+const SET_IS_FETCHING = 'SET_IS_FETCHING'
 
 let initialState = {
   cards: []
@@ -28,7 +28,7 @@ const cardsReducer = (state = initialState, action) => {
       }
     case REMOVE_CARDS:
       return {...state, cards: state.cards.filter(card => card.id !== action.payload)}
-    case SET_IS_FETCHiNG: 
+    case SET_IS_FETCHING: 
       return {
         ...state, 
         isFetching: action.payload
@@ -45,7 +45,7 @@ export const addCards = (payload) => ({type: ADD_CARDS, payload})
 
 export const removeCards = (payload) => ({type: REMOVE_CARDS, payload})
 
-export const setIsFetching = (payload) => ({type: SET_IS_FETCHiNG, payload})
+export const setIsFetching = (payload) => ({type: SET_IS_FETCHING, payload})
 
 
 export default cardsReducer;
