@@ -7,6 +7,7 @@ import {getCards} from '../../redux/async-action-cards'
 const Catalog = () => {
 
   const dispatch = useDispatch()
+  const isFetching = useSelector(state => state.isFetching)
   const cardsState = useSelector(state => state.cards)
   const cardsStateOnlyLike = cardsState.filter(card => card.isLike)
 
@@ -28,11 +29,11 @@ const Catalog = () => {
         {likesFilter ? 'Показать все' : 'Показать только лайки'} 
       </div> 
       <div className={classes.container}>
-        { 
+        { !isFetching ? 
           selectionArr.map(({id, diet, image_link, isLike, name}) => {
             return <Item key={id} diet={diet} image_link={image_link} id={id} isLike={isLike} name={name} />
-          }) 
-        } 
+          }) : <div className={classes.fetching}/> 
+        }
       </div>
     </>
   )
