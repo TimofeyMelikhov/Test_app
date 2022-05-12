@@ -4,7 +4,8 @@ const REMOVE_CARDS = 'REMOVE_CARDS'
 const SET_IS_FETCHING = 'SET_IS_FETCHING'
 
 let initialState = {
-  cards: []
+  cards: [],
+  isFetching: true
 }
 
 const cardsReducer = (state = initialState, action) => {
@@ -33,7 +34,6 @@ const cardsReducer = (state = initialState, action) => {
         ...state, 
         isFetching: action.payload
       }
-
     default:
       return state
   }

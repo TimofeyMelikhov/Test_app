@@ -29,10 +29,13 @@ const Catalog = () => {
         {likesFilter ? 'Показать все' : 'Показать только лайки'} 
       </div> 
       <div className={classes.container}>
-        { !isFetching ? 
-          selectionArr.map(({id, diet, image_link, isLike, name}) => {
-            return <Item key={id} diet={diet} image_link={image_link} id={id} isLike={isLike} name={name} />
-          }) : <div className={classes.fetching}/> 
+        { !isFetching 
+          ? 
+            selectionArr.map(({id, diet, image_link, isLike, name}) => {
+              return <Item key={id} diet={diet} image_link={image_link} id={id} isLike={isLike} name={name} />
+            }) 
+          : 
+            <div className={classes.fetching}/> 
         }
       </div>
     </>
